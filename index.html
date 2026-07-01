@@ -54,6 +54,19 @@
       color: #888;
       margin-bottom: 32px;
     }
+    .nouveau {
+      display: inline-block;
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+      background: #eaf2e0;
+      color: #5a7a35;
+      padding: 1px 7px;
+      border-radius: 4px;
+      margin-left: 8px;
+      vertical-align: middle;
+    }
     footer {
       text-align: center;
       padding: 24px;
@@ -71,7 +84,7 @@
 </header>
 
 <main>
-  <p class="date">Dernière mise à jour : juin 2026</p>
+  <p class="date">Dernière mise à jour : juillet 2026 (v1.9)</p>
 
   <p>La présente politique de confidentialité décrit comment l'application mobile de la Revue hybride de l'éducation (RHÉ) traite les informations de ses utilisateurs.</p>
 
@@ -82,15 +95,30 @@
     <li>Aucune donnée d'identification (nom, courriel, localisation) n'est collectée.</li>
     <li>Aucune donnée n'est partagée avec des tiers à des fins publicitaires ou commerciales.</li>
   </ul>
+  <p>Certaines fonctionnalités transmettent des données techniques anonymes aux serveurs de la RHÉ, telles que décrites ci-dessous.</p>
 
   <h2>Données stockées localement</h2>
-  <p>Les articles mis en favoris et les notes rédigées par l'utilisateur sont sauvegardés uniquement sur l'appareil de l'utilisateur, via le stockage local de l'application. Ces données ne sont jamais transmises à un serveur externe.</p>
+  <p>Les articles mis en favoris, les notes de lecture et les réponses HybridIA sauvegardées sont conservés uniquement sur l'appareil de l'utilisateur, via le stockage local de l'application. Ces données ne sont jamais transmises à un serveur externe.</p>
+
+  <h2>Réflexions publiques <span class="nouveau">Nouveau — v1.9</span></h2>
+  <p>La version 1.9 introduit la fonctionnalité Réflexions publiques, qui permet aux utilisateurs de partager une réflexion sur un article avec l'ensemble des lecteurs de l'App. Cette fonctionnalité implique le traitement suivant :</p>
+  <ul>
+    <li><strong>Identifiant anonyme d'appareil.</strong> Lors de la première publication d'une réflexion, un identifiant unique (UUID) est généré automatiquement et sauvegardé sur l'appareil. Cet identifiant est purement technique et ne permet pas d'identifier l'utilisateur. Il est transmis aux serveurs de la RHÉ uniquement en lien avec les réflexions publiées. En cas de réinstallation de l'application ou de changement d'appareil, un nouvel identifiant est généré — les réflexions antérieures ne peuvent plus être revendiquées depuis le nouvel appareil.</li>
+    <li><strong>Contenu des réflexions.</strong> Le texte d'une réflexion, la balise choisie et, si l'utilisateur le souhaite, son poste (ex. : enseignante au primaire) sont transmis et conservés sur les serveurs de la RHÉ. Ces informations sont visibles par l'ensemble des utilisateurs de l'App.</li>
+    <li><strong>Irréversibilité.</strong> Une réflexion publiée ne peut être ni modifiée ni supprimée par son auteur. Le comité éditorial de la RHÉ se réserve le droit de retirer tout contenu ne respectant pas les règles usuelles de politesse, de courtoisie et de respect.</li>
+    <li><strong>Signalements.</strong> Si un utilisateur signale une réflexion, un enregistrement anonyme (identifiant d'appareil + identifiant de la réflexion) est conservé sur les serveurs de la RHÉ à des fins de modération.</li>
+  </ul>
+
+  <h2>Notifications push <span class="nouveau">v1.7</span></h2>
+  <p>Si l'utilisateur autorise les notifications, un jeton technique fourni par Apple (APNs) est transmis aux serveurs de la RHÉ afin de permettre l'envoi de notifications lors de la publication de nouveaux contenus. Ce jeton est un identifiant technique propre à l'appareil et ne permet pas d'identifier l'utilisateur.</p>
 
   <h2>Connexion à Internet</h2>
   <p>L'application accède à Internet uniquement pour :</p>
   <ul>
     <li>Charger le contenu des articles de la RHÉ depuis la base de données de la revue.</li>
     <li>Envoyer les questions posées à HybridIA et recevoir les réponses générées. Ces questions ne sont pas associées à un utilisateur identifiable.</li>
+    <li>Publier et consulter les Réflexions publiques (v1.9).</li>
+    <li>Envoyer et recevoir les notifications push, si l'utilisateur y consent (v1.7).</li>
   </ul>
 
   <h2>Intelligence artificielle (HybridIA)</h2>
